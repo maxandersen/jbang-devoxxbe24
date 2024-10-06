@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ -n "$LAMBDA_TASK_ROOT" ]; then
+    cd $LAMBDA_TASK_ROOT
+fi
+
+export JBANG_REPO=/tmp/repo
+export JBANG_DIR=/tmp/jbang
+
+./jbang src/example/Hello.java example.Hello
